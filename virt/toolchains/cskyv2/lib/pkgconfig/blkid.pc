@@ -1,0 +1,11 @@
+prefix=/labs/linux-lab/buildroot/output/host
+exec_prefix=/labs/linux-lab/buildroot/output/host
+libdir=/labs/linux-lab/buildroot/output/host/lib
+includedir=/labs/linux-lab/buildroot/output/host/include
+
+Name: blkid
+Description: Block device id library
+Version: 2.30.2
+Requires.private: uuid
+Cflags: -I${includedir}/blkid
+Libs: -L${libdir} -lblkid

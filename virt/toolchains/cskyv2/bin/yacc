@@ -1,0 +1,2 @@
+#! /bin/sh
+exec '/labs/linux-lab/buildroot/output/host/bin/bison' -y "$@"

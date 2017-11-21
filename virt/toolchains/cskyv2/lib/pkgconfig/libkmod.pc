@@ -1,0 +1,11 @@
+prefix=/labs/linux-lab/buildroot/output/host
+exec_prefix=/labs/linux-lab/buildroot/output/host
+libdir=/labs/linux-lab/buildroot/output/host/lib
+includedir=/labs/linux-lab/buildroot/output/host/include
+
+Name: libkmod
+Description: Library to deal with kernel modules
+Version: 24
+Libs: -L${libdir} -lkmod
+Libs.private:  
+Cflags: -I${includedir}
