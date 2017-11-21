@@ -26,7 +26,7 @@ After booting into Linux Lab, just launch a terminal and do:
     $ make BOARD=csky/virt
     $ make boot
 
-Since csky Linux can not accept bootargs and initrd from qemu, so `-initrd` and `-append` options of qemu not work, to pass bootargs to Linux, we must use device tree, here it is `arch/csky/boot/dts/ck810.dts` and it means, we can not simply change root devince during boot but instead need to update dts with new bootargs, recompile it and then boot:
+Since csky Linux can not accept bootargs and initrd from qemu, so, the `-initrd` and `-append` options of qemu not work, to pass bootargs to Linux, we must use device tree, here it is `arch/csky/boot/dts/ck810.dts` and it means, we can not simply change root device during boot but instead need to update dts with new bootargs, recompile it and then boot:
 
     $ make kernel ROOTDEV=/dev/nfs
     $ make boot
