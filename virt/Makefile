@@ -20,7 +20,7 @@ QTOOL   ?= $(TOP_DIR)/boards/$(BOARD)/qemu/$(XARCH)-softmmu/qemu-system-$(XARCH)
 KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/vmlinux
 #KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/Image
 DTB     ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/ck810.dtb
-CCPATH  ?= $(TOP_DIR)/boards/$(BOARD)/toolchains/$(XARCH)/bin
+CCPATH  ?= $(TOP_DIR)/boards/$(BOARD)/toolchains/$(XARCH)/opt/ext-toolchain/bin
 # The old busybox rootfs is not powerful enough
 # Use the prebuilt one of Linux Lab
 ROOTFS  ?= $(TOP_DIR)/boards/$(BOARD)/root/$(XARCH)/$(CPU)/rootfs.cpio.gz
