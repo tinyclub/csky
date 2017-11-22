@@ -13,6 +13,12 @@ Currently, the following packages are ported:
 - Linux
 - Buildroot
 
+## Demonstration
+
+To quickly take a look at the effect of this plugin, please open [this video](http://showterm.io/90d11debc3e51bb56d274) recorded by showterm. It simply issue:
+
+    $ make test BOARD=csky/virt TEST=root-full,kernel-full
+
 ## Usage
 
 At first, please install the Linux develoment environment with this document: [Linux Lab](https://github.com/tinyclub/linux-lab).
