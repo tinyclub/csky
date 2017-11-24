@@ -12,16 +12,16 @@ SERIAL  ?= ttyS0
 # None external initrd, csky Linux doesn't support -initrd and -append of qemu currently
 ROOTDEV ?= /dev/null
 FSTYPE  ?= ext2
-ORIDTS  ?= arch/$(ARCH)/boot/dts/ck810.dts
-ORIDTB  ?= arch/$(ARCH)/boot/dts/ck810.dtb
 ORIIMG  ?= vmlinux
 CCPRE   ?= csky-abiv2-linux-
-QTOOL   ?= $(TOP_DIR)/boards/$(BOARD)/qemu/$(XARCH)-softmmu/qemu-system-$(XARCH)
+QTOOL   ?= $(BOARD_DIR)/qemu/$(XARCH)-softmmu/qemu-system-$(XARCH)
 PREBUILT?= private
-KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/vmlinux
-#KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/Image
-DTB     ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/ck810.dtb
-CCPATH  ?= $(TOP_DIR)/boards/$(BOARD)/toolchains/$(XARCH)/opt/ext-toolchain/bin
+KIMAGE  ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/vmlinux
+KCLI_DTS?= 1
+#ORIDTS  ?= arch/$(ARCH)/boot/dts/ck810.dts
+DTS     ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/ck810.dts
+DTB     ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/ck810.dtb
+CCPATH  ?= $(BOARD_DIR)/toolchains/$(XARCH)/opt/ext-toolchain/bin
 # The old busybox rootfs is not powerful enough
 # Use the prebuilt one of Linux Lab
-ROOTFS  ?= $(TOP_DIR)/boards/$(BOARD)/root/$(XARCH)/$(CPU)/rootfs.cpio.gz
+ROOTFS  ?= $(BOARD_DIR)/root/$(XARCH)/$(CPU)/rootfs.cpio.gz
