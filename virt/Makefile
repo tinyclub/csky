@@ -17,6 +17,7 @@ ORIDTB  ?= arch/$(ARCH)/boot/dts/ck810.dtb
 ORIIMG  ?= vmlinux
 CCPRE   ?= csky-abiv2-linux-
 QTOOL   ?= $(TOP_DIR)/boards/$(BOARD)/qemu/$(XARCH)-softmmu/qemu-system-$(XARCH)
+PREBUILT?= private
 KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/vmlinux
 #KIMAGE  ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/Image
 DTB     ?= $(TOP_DIR)/boards/$(BOARD)/kernel/$(XARCH)/$(LINUX)/ck810.dtb
