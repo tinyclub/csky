@@ -19,9 +19,9 @@ PREBUILT?= private
 KIMAGE  ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/vmlinux
 KCLI_DTS?= 1
 #ORIDTS  ?= arch/$(ARCH)/boot/dts/ck810.dts
-DTS     ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/ck810.dts
-DTB     ?= $(BOARD_DIR)/kernel/$(XARCH)/$(LINUX)/ck810.dtb
-CCPATH  ?= $(BOARD_DIR)/toolchains/$(XARCH)/opt/ext-toolchain/bin
+DTS     ?= $(BOARD_KERNEL)/$(XARCH)/$(LINUX)/ck810.dts
+DTB     ?= $(BOARD_KERNEL)/$(XARCH)/$(LINUX)/ck810.dtb
+CCPATH  ?= $(BOARD_TOOLCHAIN)/$(XARCH)/opt/ext-toolchain/bin
 # The old busybox rootfs is not powerful enough
 # Use the prebuilt one of Linux Lab
-ROOTFS  ?= $(BOARD_DIR)/root/$(XARCH)/$(CPU)/rootfs.cpio.gz
+ROOTFS  ?= $(BOARD_ROOT)/$(XARCH)/$(CPU)/rootfs.cpio.gz
