@@ -1,7 +1,7 @@
 
 # Linux Lab Plugin: csky
 
-This is a porting of [C-Sky Linux](https://github.com/c-sky) to [Linux Lab](https://github.com/tinyclub/linux-lab).
+This is a porting of [C-Sky Linux](https://github.com/c-sky) to [Linux Lab](https://gitee.com/tinylab/linux-lab).
 
 It aims to easier the learning and development of the [C-Sky](https://c-sky.github.io) CPU architecture.
 
@@ -21,12 +21,12 @@ To quickly take a look at the effect of this plugin, please open [this video](ht
 
 ## Usage
 
-At first, please install the Linux develoment environment with this document: [Linux Lab](https://github.com/tinyclub/linux-lab).
+At first, please install the Linux develoment environment with this document: [Linux Lab](https://gitee.com/tinylab/linux-lab).
 
 After booting into Linux Lab, just launch a terminal and do:
 
     $ cd boards
-    $ git clone https://github.com/tinyclub/csky.git
+    $ git clone https://gitee.com/tinylab/csky.git
     $ cd ../
     $ make list
     $ make BOARD=csky/virt
