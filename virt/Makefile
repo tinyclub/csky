@@ -10,7 +10,9 @@ BUILDROOT?= 131995
 NETDEV  ?= csky_mac_v2
 SERIAL  ?= ttyS0
 # None external initrd, csky Linux doesn't support -initrd and -append of qemu currently
-ROOTDEV ?= /dev/null
+# /dev/null: for builtin initramfs
+# /dev/nfs : for nfs rootfs
+ROOTDEV ?= /dev/nfs
 FSTYPE  ?= ext2
 ORIIMG  ?= vmlinux
 CCPRE   ?= csky-abiv2-linux-
