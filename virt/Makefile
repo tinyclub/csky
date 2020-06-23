@@ -1,3 +1,4 @@
+# Copyright (C) 2016-2020 Wu Zhangjin <lzufalcon@163.com>
 _PLUGIN  = 1
 ARCH     = csky
 XARCH    = cskyv2
