@@ -1,0 +1,39 @@
+From 9058ea4ec530d9c16321df9cfcec5becfb1dd551 Mon Sep 17 00:00:00 2001
+From: Wu Zhangjin <falcon@tinylab.org>
+Date: Tue, 23 Jun 2020 21:31:35 +0800
+Subject: [PATCH] csky: qemu: focal: fix up compiling errors
+
+Signed-off-by: Wu Zhangjin <falcon@tinylab.org>
+---
+ qga/commands-posix.c | 1 +
+ util/memfd.c         | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/qga/commands-posix.c b/qga/commands-posix.c
+index 73d93eb..c458691 100644
+--- a/qga/commands-posix.c
++++ b/qga/commands-posix.c
+@@ -40,6 +40,7 @@ extern char **environ;
+ #include <arpa/inet.h>
+ #include <sys/socket.h>
+ #include <net/if.h>
++#include <sys/sysmacros.h>
+ 
+ #ifdef FIFREEZE
+ #define CONFIG_FSFREEZE
+diff --git a/util/memfd.c b/util/memfd.c
+index 4571d1a..d9c1657 100644
+--- a/util/memfd.c
++++ b/util/memfd.c
+@@ -37,7 +37,7 @@
+ #include <sys/syscall.h>
+ #include <asm/unistd.h>
+ 
+-static int memfd_create(const char *name, unsigned int flags)
++int memfd_create(const char *name, unsigned int flags)
+ {
+ #ifdef __NR_memfd_create
+     return syscall(__NR_memfd_create, name, flags);
+-- 
+2.7.4
+
